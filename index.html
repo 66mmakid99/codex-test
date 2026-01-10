@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>음력/양력 달력</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="app__header">
+        <div>
+          <p class="app__subtitle">음력과 양력을 한눈에</p>
+          <h1 class="app__title">달력</h1>
+        </div>
+        <div class="app__controls">
+          <button class="toggle" type="button" data-mode="solar" aria-pressed="true">
+            양력 중심
+          </button>
+          <button class="toggle" type="button" data-mode="lunar" aria-pressed="false">
+            음력 중심
+          </button>
+        </div>
+      </header>
+
+      <section class="calendar">
+        <div class="calendar__nav">
+          <button class="nav" type="button" data-action="prev" aria-label="이전 달">
+            ◀
+          </button>
+          <div class="calendar__title" aria-live="polite"></div>
+          <button class="nav" type="button" data-action="next" aria-label="다음 달">
+            ▶
+          </button>
+        </div>
+
+        <div class="calendar__weekdays" role="row">
+          <span>일</span>
+          <span>월</span>
+          <span>화</span>
+          <span>수</span>
+          <span>목</span>
+          <span>금</span>
+          <span>토</span>
+        </div>
+        <div class="calendar__grid" role="grid"></div>
+      </section>
+
+      <section class="info">
+        <h2>표기 방식</h2>
+        <ul>
+          <li>큰 숫자는 양력(그레고리력) 날짜입니다.</li>
+          <li>작은 숫자는 음력(음력/중국력 기반) 날짜입니다.</li>
+          <li>음력 중심 모드는 음력 날짜를 강조해 보여줍니다.</li>
+        </ul>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
